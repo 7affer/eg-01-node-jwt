@@ -29,17 +29,15 @@ exports.config = {
     /** The private key */
     /** Enter the key as a multiline string value. No leading spaces! */
   , privateKey: env.DS_PRIVATE_KEY || `{RSA_PRIVATE_KEY}`
-    /** For the Developer Sandbox (demo) use <b>https://account-d.docusign.com</b><br>
-      * For production (all sites) use <b>https://account.docusign.com</b> */
-
-
   /** The account_id that will be used.
    *  If set to false, then the user's default account will be used.
    *  If an account_id is provided then it must be the guid
    *  version of the account number.
    *  Default: false  */
   , targetAccountId: false
-  // The authentication server. DO NOT INCLUDE https:// prefix!
+  /** The authentication server. DO NOT INCLUDE https:// prefix!
+   * For the Developer Sandbox (demo) use <b>account-d.docusign.com</b><br>
+   * For production (all sites) use <b>account.docusign.com</b> */
   , authServer: env.DS_AUTH_SERVER || 'account-d.docusign.com'
     /** The same value must be set as a redirect URI in the
      *  DocuSign admin tool. This setting is <b>only</b> used for individually granting
